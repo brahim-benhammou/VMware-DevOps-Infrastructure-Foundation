@@ -13,7 +13,7 @@ Provide a stable foundation for testing infrastructure automation, high availabi
 | :--- | :--- | :--- | :--- |
 | **Host 1** | Dell PowerEdge R640 | Production Node A | **10Gb SFP+** |
 | **Host 2** | Dell PowerEdge R640 | Production Node B | **10Gb SFP+** |
-| **Host 3** | Dell PowerEdge R630 | Management & Witness Node | **1Gb Ethernet** |
+| **Host 3** | Dell PowerEdge R630 | Management plane, vsan witness| **1Gb Ethernet** |
 | **Switch** | Layer 3 Switch | catalyst 3750-x series| 10Gb SFP+ / 1Gb Ports |
 
 ---
@@ -53,6 +53,6 @@ Storage traffic is isolated on VLAN 30 using dedicated 10Gb networking to ensure
 ---
 
 ## 5. Reliability Strategy
-- **High Availability (HA):** 3-node cluster with the R630 acting as the **Witness/Quorum** node.
+- **High Availability (HA):** 3-node cluster with the R630 acting as the **Witness vsan** node
 - **Enhanced vMotion (EVC):** Enabled to allow live-migration between different CPU generations (R630/R640).
 - **Traffic Isolation:** High-speed storage and vMotion traffic isolated to dedicated 10Gb SFP+ ports.
