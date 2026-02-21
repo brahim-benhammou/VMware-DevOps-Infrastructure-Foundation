@@ -39,7 +39,7 @@ Provide a stable foundation for testing infrastructure automation, high availabi
 | **Active Directory** | 10.10.10.10 | ad-01.lab.local | Identity & DNS  |
 | **vCenter Server** | 10.10.10.20 | vcenter.lab.local | Infrastructure Management |
 
-## 5. Storage Architecture
+## 4. Storage Architecture
 
 The workload cluster uses VMware vSAN to provide centralized shared storage across the hosts.
 
@@ -52,7 +52,7 @@ Storage traffic is isolated on VLAN 30 using dedicated 10Gb networking to ensure
 
 ---
 
-## 4. Reliability Strategy
+## 5. Reliability Strategy
 - **High Availability (HA):** 3-node cluster with the R630 acting as the **Witness/Quorum** node.
 - **Enhanced vMotion (EVC):** Enabled to allow live-migration between different CPU generations (R630/R640).
 - **Traffic Isolation:** High-speed storage and vMotion traffic isolated to dedicated 10Gb SFP+ ports.
